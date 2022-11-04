@@ -55,6 +55,7 @@ searchBtn.addEventListener('click', function(e){
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
+    slidesPerView: 4,
     freemode: true,
   
     // If we need pagination
@@ -73,9 +74,6 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
     breakpoints: {
-      1920: {
-        slidesPerView: 4,
-      },
       1024: {
         slidesPerView: 2,
       },

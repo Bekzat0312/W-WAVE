@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="./assets/css/media.css">
 </head>
 
-
 <body>
   <header class="header">
     <div class="header__up">
@@ -25,6 +24,7 @@
         <div class="header__logo">
           <a href="" aria-label="logo">
             <picture>
+              <source media="(max-width:320px)" srcset="./assets/img/logo-head-320.svg">
               <source media="(max-width:1024px)" srcset="./assets/img/logo-1024-header.svg">
               <img src="./assets/img/logo-1920-header.svg" alt="Logo">
             </picture>
@@ -112,6 +112,7 @@
         </div>
       </div>
     </div>
+    <div class="header__border"></div>
     <div class="header__down">
       <div class="container header__container-down flex justify-content-space-between">
         <nav class="header__nav-down">
@@ -136,6 +137,7 @@
             </li>
           </ul>
         </nav>
+        <button class="btn-reset header__player-btn-320 text-500-20-20 violet">Что в эфире?</button>
         <div class="header__block flex">
           <button class="header__player header__player-1 flex btn-reset">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +176,7 @@
                   </button>
         </div>
         <picture class="hero__microphone">
-          <source media="(max-width:1024px" srcset="./assets/img/microphone-1024.png">
+          <source media="(max-width:1024px)" srcset="./assets/img/microphone-1024.png">
           <img src="./assets/img/microphone.png" alt="Микрофон" class="hero__img">
         </picture>
       </div>
@@ -186,6 +188,7 @@
           <article class="podcast__articles flex">
             <div class="podcast__articles-left">
               <picture class="podcast-before-1 podcast-befor">
+                <source media="(max-width:320px)" srcset="./assets/img/podcast-1-320.png">
                 <img src="./assets/img/1.png" alt="Европа. XIX век">
               </picture>
             </div>
@@ -370,6 +373,7 @@
           <article class="podcast__articles flex">
             <div class="podcast__articles-left">
               <picture class="podcast-before-2 podcast-befor">
+                <source media="(max-width:320px)" srcset="./assets/img/podcast-2-320.png">
                 <img src="./assets/img/2.png" alt="О музыке">
               </picture>
             </div>
@@ -659,6 +663,7 @@
           <article class="podcast__articles flex">
             <div class="podcast__articles-left">
               <picture class="podcast-before-3 podcast-befor">
+                <source media="(max-width:320px)" srcset="./assets/img/podcast-3-320.png">
                 <img src="./assets/img/3.png" alt="Люди
 сегодня">
               </picture>
@@ -973,6 +978,7 @@
           <article class="podcast__articles flex">
             <div class="podcast__articles-left">
               <picture class="podcast-before-4 podcast-befor">
+                <source media="(max-width:320px)" srcset="./assets/img/podcast-4-320.png">
                 <img src="./assets/img/4.png" alt="Хэллоу,
 Африка!">
               </picture>
@@ -2591,10 +2597,15 @@ XIX
         </aside>
         <div class="show__articles flex">
           <article class="show__article">
-            <img src="./assets/img/show-1.jpg" alt="" class="show__img">
+            <div class="show__picture">
+              <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/show-320-1.png">
+                <img src="./assets/img/show-1.jpg" alt="show-card" class="show__img">
+              </picture>
+            </div>
             <div class="show__text">
-              <h6 class="show__name text-500-20-20">О людях и книгах</h6>
-              <span class="text-400-12-12 gray show__span">
+              <h6 class="show__name first-article-title text-500-20-20 text-500-12-12">О людях и книгах</h6>
+              <span class="text-400-12-12 gray show__span first-article-span">
                            Анонсируется отдельно
                         </span>
               <a href="" class="show__more text-400-16-16 italic">
@@ -2649,9 +2660,14 @@ XIX
             </div>
           </article>
           <article class="show__article">
-            <img src="./assets/img/show-2.jpg" alt="" class="show__img">
+            <div class="show__picture">
+              <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/show-320-2.png">
+                <img src="./assets/img/show-2.jpg" alt="show-card" class="show__img">
+              </picture>
+            </div>
             <div class="show__text">
-              <h6 class="show__name text-500-20-20">Графомания td</h6>
+              <h6 class="show__name text-500-20-20 text-500-12-12">Графомания td</h6>
               <span class="text-400-12-12 gray show__span">
                            По понедельникам в 10:00
                         </span>
@@ -2707,9 +2723,14 @@ XIX
             </div>
           </article>
           <article class="show__article">
-            <img src="./assets/img/show-3.jpg" alt="" class="show__img">
+            <div class="show__picture">
+              <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/show-320-3.png">
+                <img src="./assets/img/show-3.jpg" alt="show-card" class="show__img">
+              </picture>
+            </div>
             <div class="show__text">
-              <h6 class="show__name text-500-20-20">Не Рим, не Троя</h6>
+              <h6 class="show__name text-500-20-20 text-500-12-12">Не Рим, не Троя</h6>
               <span class="text-400-12-12 gray show__span">
                            По вторникам в 12:00
                         </span>
@@ -2765,9 +2786,14 @@ XIX
             </div>
           </article>
           <article class="show__article">
-            <img src="./assets/img/show-4.jpg" alt="" class="show__img">
+            <div class="show__picture">
+              <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/show-320-4.png">
+                <img src="./assets/img/show-4.jpg" alt="show-card" class="show__img">
+              </picture>
+            </div>
             <div class="show__text">
-              <h6 class="show__name text-500-20-20">Эрудит</h6>
+              <h6 class="show__name text-500-20-20 text-500-12-12">Эрудит</h6>
               <span class="text-400-12-12 gray show__span">
                            По пятницам в 17:00
                         </span>
@@ -2823,9 +2849,14 @@ XIX
             </div>
           </article>
           <article class="show__article">
-            <img src="./assets/img/show-5.jpg" alt="" class="show__img">
+            <div class="show__picture">
+              <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/show-320-5.png">
+                <img src="./assets/img/show-5.jpg" alt="show-card" class="show__img">
+              </picture>
+            </div>
             <div class="show__text">
-              <h6 class="show__name text-500-20-20">Тонкости эпох</h6>
+              <h6 class="show__name text-500-20-20 text-500-12-12">Тонкости эпох</h6>
               <span class="text-400-12-12 gray show__span">
                            По субботам в 10:00
                         </span>
@@ -2881,9 +2912,14 @@ XIX
             </div>
           </article>
           <article class="show__article">
-            <img src="./assets/img/show-6.jpg" alt="" class="show__img">
+            <div class="show__picture">
+              <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/show-320-6.png">
+                <img src="./assets/img/show-6.jpg" alt="show-card" class="show__img">
+              </picture>
+            </div>
             <div class="show__text">
-              <h6 class="show__name text-500-20-20">Живые мысли</h6>
+              <h6 class="show__name text-500-20-20 text-500-12-12">Живые мысли</h6>
               <span class="text-400-12-12 gray show__span">
                            По воскресеньям в 15:30
                         </span>
@@ -3050,35 +3086,41 @@ XIX
             <div class="hosts__card tabs__item tabs__item--active" data-target="1">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>          
             </div>
             <div class="hosts__card tabs__item" data-target="2">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="3">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="4">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="5">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <article class="hosts__card tabs__item" data-target="6">
               <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/host-320.png">
                 <source media="(max-width:768px)" srcset="./assets/img/hosts-768-olga.png">
                 <img src="./assets/img/hosts.jpg" alt="">
               </picture>
@@ -3096,60 +3138,70 @@ XIX
             <div class="hosts__card tabs__item" data-target="7">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="8">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="9">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="10">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="11">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="12">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="13">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="14">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="15">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
             <div class="hosts__card tabs__item" data-target="16">
               <picture>
                 <source media="(max-width:768px)" srcset="./assets/img/заглушка-768.png">
+                <source media="(max-width:320px)" srcset="./assets/img/заглушка-320.png">
                 <img src="./assets/img/заглушка.jpg" alt="заглушка">
               </picture>
             </div>
@@ -3162,7 +3214,7 @@ XIX
         <div class="playlist__left">
           <h2 class="section__title playlist__title">Плейлисты</h2>
           <span class="playlist__genre text-400-16-16 gray">Жанр</span>
-          <form class="playlist__form">
+          <form class="playlist__form" data-simplebar>
             <label for="1" class="playlist__custom">
               <input type="radio" name="name" id="1">
               <button class="btn-reset text-400-20-20">
@@ -3178,7 +3230,7 @@ XIX
             <label for="3" class="playlist__custom">
               <input type="radio" name="name" id="3">
               <button class="btn-reset text-400-20-20">
-                <span>Панк-рок</span>
+                <span class="playlist__pank">Панк-рок</span>
               </button>
             </label>
             <label for="4" class="playlist__custom">
@@ -3190,25 +3242,25 @@ XIX
             <label for="5" class="playlist__custom">
               <input type="radio" name="name" id="5">
               <button class="btn-reset text-400-20-20">
-                <span>Прогрессивный рок</span>
+                <span class="playlist__last">Прогрессивный рок</span>
               </button>
             </label>
             <label for="6" class="playlist__custom">
               <input type="radio" name="name" id="6">
               <button class="btn-reset text-400-20-20">
-                <span>Электронная музыка</span>
+                <span class="playlist__last-2">Электронная музыка</span>
               </button>
             </label>
             <label for="7" class="playlist__custom">
               <input type="radio" name="name" id="7">
               <button class="btn-reset text-400-20-20">
-                <span>Классическая музыка</span>
+                <span class="playlist__last-3">Классическая музыка</span>
               </button>
             </label>
             <label for="8" class="playlist__custom">
               <input type="radio" name="name" id="8">              
               <button class="btn-reset text-400-20-20">
-                <span>Звуки природы и шум города</span>
+                <span class="playlist__last-4">Звуки природы и шум города</span>
               </button>
             </label>
           </form>
@@ -3349,6 +3401,7 @@ XIX
         <div class="player__left">
           <div class="player__new"></div>
           <picture>
+            <source media="(max-width: )" srcset="./assets/img/player-320.png">
             <source media="(max-width:768px)" srcset="./assets/img/player-768.png">
             <source media="(max-width:1024px)" srcset="./assets/img/play-1024.png">
             <img src="./assets/img/player.png" alt="Радио" class="player__radio">
@@ -3390,6 +3443,7 @@ XIX
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/about-320-1.png">
                 <source media="(max-width:768px)" srcset="./assets/img/about-1-768.jpg">
                 <source media="(max-width:1024px)" srcset="./assets/img/about-1-1024.jpg">
                 <img src="./assets/img/about-1.jpg" alt="" class="about__img">
@@ -3401,6 +3455,7 @@ XIX
             </div>
             <div class="swiper-slide">
               <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/about-320-2.png">
                 <source media="(max-width:768px)" srcset="./assets/img/about-2-768.jpg">
                 <source media="(max-width:1024px)" srcset="./assets/img/about-2-1024.jpg">
                 <img src="./assets/img/about-2.jpg" alt="" class="about__img">
@@ -3412,6 +3467,7 @@ XIX
             </div>
             <div class="swiper-slide">
               <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/about-320-3.png">
                 <source media="(max-width:768px)" srcset="./assets/img/about-3-768.jpg">
                 <source media="(max-width:1024px)" srcset="./assets/img/about-3-1024.jpg">
                 <img src="./assets/img/about-3.jpg" alt="" class="about__img">
@@ -3423,6 +3479,7 @@ XIX
             </div>
             <div class="swiper-slide">
               <picture>
+                <!-- <source media="(max-width:320px)" srcset="./assets/img/about-320-4.png"> -->
                 <source media="(max-width:768px)" srcset="./assets/img/about-4-768.jpg">
                 <source media="(max-width:1024px)" srcset="./assets/img/about-4-1024.jpg">
                 <img src="./assets/img/about-4.jpg" alt="" class="about__img">
@@ -3434,6 +3491,7 @@ XIX
             </div>
             <div class="swiper-slide">
               <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/about-320-5.png">
                 <source media="(max-width:768px)" srcset="./assets/img/about-5-768.jpg">
                 <source media="(max-width:1024px)" srcset="./assets/img/about-5-1024.jpg">
                 <img src="./assets/img/about-5.jpg" alt="" class="about__img">
@@ -3445,6 +3503,7 @@ XIX
             </div>
             <div class="swiper-slide">
               <picture>
+                <source media="(max-width:320px)" srcset="./assets/img/about-320-6.png">
                 <source media="(max-width:768px)" srcset="./assets/img/about-6-768.jpg">
                 <source media="(max-width:1024px)" srcset="./assets/img/about-6-1024.jpg">
                 <img src="./assets/img/about-6.jpg" alt="" class="about__img">
@@ -3457,13 +3516,13 @@ XIX
           </div>
         </div>
         <form action="https://jsonplaceholder.typicode.com/posts" class="about__form" method="post" id="form" autocomplete="off">
-          <textarea name="textarea" id="textarea" placeholder="Что&nbsp;скажете?"></textarea>
+          <textarea name="textarea" id="textarea" placeholder="Что&nbsp;скажете?" class="text-400-20-20"></textarea>
           <div class="flex about__form-flex justify-content-space-between">
             <label for="name">
-              <input type="text" name="Имя" id="name" placeholder="Имя" class="form__input form-control form__place name" autocomplete="off">
+              <input type="text" name="Имя" id="name" placeholder="Имя" class="form__input form-control form__place name text-400-20-20" autocomplete="off">
             </label>
             <label for="email">
-              <input type="email" name="Email" id="email" placeholder="Email" class="form__input form-control form__place mail" autocomplete="off">
+              <input type="email" name="Email" id="email" placeholder="Email" class="form__input form-control form__place mail text-400-20-20" autocomplete="off">
             </label>
           </div>
           <button id="submit-btn" class="btn btn-primary about__form-btn btn-reset text-500-20-20 white">

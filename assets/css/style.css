@@ -417,6 +417,12 @@ body {
     line-height: 16px;
     color: var(--gray);
 }
+.header__player-btn-320{
+    display: none;
+}
+.header__border{
+    display: none;
+}
 .header__search-open input:-ms-input-placeholder {
     font-family: "Muller";
     font-weight: 400;
@@ -666,6 +672,7 @@ body {
 }
 .podcast__up {
     padding: 6% 6.5% 0 7%;
+    background: var(--white);
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -678,7 +685,6 @@ body {
 .podcast__articles {
     width: 48.5%;
     height: 140px;
-    background-color: var(--white);
 }
 .podcast__articles:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
@@ -1544,12 +1550,6 @@ html .ui-button.ui-state-disabled:active {
     padding: 30px 10px 10px 32px;
     border: 1px solid var(--white);
     border-radius: 30px;
-    font-family: "Muller";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    color: var(--gray);
     margin-bottom: 2.5%;
 }
 .form__place {
@@ -1557,12 +1557,6 @@ html .ui-button.ui-state-disabled:active {
     border: 1px solid #ffffff;
     border-radius: 40px;
     height: 70px;
-    font-family: "Muller";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    color: var(--gray);
     width: 100%;
 }
 .about__form-flex {

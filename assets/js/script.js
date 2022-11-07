@@ -83,6 +83,9 @@ const swiper = new Swiper('.swiper', {
       768: {
         slidesPerView: 2,
       },
+      320: {
+        slidesPerView: 2,
+      },
     },
   });
 
@@ -103,11 +106,11 @@ const swiper = new Swiper('.swiper', {
   .addField('#email', [
     {
       rule: 'required',
-      errorMessage: 'Email is required',
+      errorMessage: 'Ошибка',
     },
     {
       rule: 'email',
-      errorMessage: 'Email is invalid!',
+      errorMessage: 'Ошибка',
     },
   ]);
 
@@ -116,6 +119,18 @@ const swiper = new Swiper('.swiper', {
     document.querySelector('.menu').classList.toggle("animate");
     document.querySelector('.nav__vector-1').classList.toggle("active");
     document.querySelector('.nav__vector-2').classList.toggle("active");
+    document.querySelector('.header__nav-down').classList.toggle("active");
+    document.querySelector('.header__list-down').classList.toggle("active");
   })
 
+  document.querySelector('.header__player-btn-320').addEventListener('click', function(){
+    document.querySelector('.header__player-btn-320').classList.toggle('active');
+    document.querySelector('.header__player-1').classList.toggle("active");
+    document.querySelector('.header__player-next').classList.toggle("active");
+    document.querySelector('.header__block').classList.toggle("active");
+  })
+
+  document.querySelector('.podcast__btn').addEventListener('click', function(){
+    document.querySelectorAll('.podcast__articles').classList.toggle('active');
+  })
   

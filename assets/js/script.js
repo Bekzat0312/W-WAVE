@@ -25,33 +25,45 @@ tabsBtn.forEach(function(element){
 
 new Accordion('.accordion-container');
 
-
 let loginBtn = document.querySelector('.header__btn');
-let modal = document.querySelector('.header__btn-open');
+let modal = document.querySelector('.header__modal-content');
 let closeBtn = document.querySelector('.header__open-svg');
 let body = document.querySelector('body');
+let bgBack = document.querySelector('.header__modal-container');
 
 loginBtn.addEventListener('click', function(){
-    modal.classList.add('header__btn-open--active');
+    modal.classList.add('header__modal-content--active');
+    modal.classList.add('animate__bounceIn');
     body.classList.add('overflow-hidden');
+    modal.classList.remove('animate__fadeOutDownBig');
+    bgBack.classList.add('active');
 });
 
 closeBtn.addEventListener('click',
     function(){
-        modal.classList.remove('header__btn-open--active')
+        modal.classList.remove('header__modal-content--active');
+        modal.classList.add('animate__fadeOutDownBig');
         body.classList.remove('overflow-hidden');
+        modal.classList.remove('animate__bounceIn');
+        bgBack.classList.remove('active');
     }
 )
 
-let searchBtn = document.querySelector('.header__search-link');
+let searchBtn = document.querySelector('.header__search-svg');
 let modalSearch = document.querySelector('.header__search-open');
+let closeSearch = document.querySelector('.header__search-close');
 
 searchBtn.addEventListener('click', function(e){
     e.preventDefault();
     modalSearch.classList.toggle('header__search-open--active');
+    searchBtn.classList.toggle('active')
     modalSearch.classList.toggle('animate__bounceIn');
 });
-
+closeSearch.addEventListener('click', function(e){
+  e.preventDefault();
+  modalSearch.classList.remove('header__search-open--active');
+  searchBtn.classList.remove('active')
+});
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -130,7 +142,8 @@ const swiper = new Swiper('.swiper', {
     document.querySelector('.header__block').classList.toggle("active");
   })
 
-  document.querySelector('.podcast__btn').addEventListener('click', function(){
-    document.querySelectorAll('.podcast__articles').classList.toggle('active');
+  document.querySelector('.podcast__btn').addEventListener('click', function(el){
+    document.querySelectorAll('.podcast__articles-more').forEach(el=>{
+      el.classList.remove('podcast__articles-more')});
   })
   

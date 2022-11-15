@@ -1,7 +1,8 @@
 @media (max-width: 1024px){
     /* GLOBAL */
     .container{
-        max-width: 822px;
+        width: 822px;
+        padding: 0 10%;
     }
 
     
@@ -21,7 +22,9 @@
         width: 18.5%;
     }
     .header__btn{
-        padding: 10px 30.5px;
+        width: 67%;
+        text-align: center;
+        padding: 10px 13.5px;
         height: 100%;
     }
     .header__nav-down{
@@ -35,8 +38,21 @@
         display: none;
     }
     .header__player::after{
-        top: 52%;
+        top: 53%;
+        left: 27%;
+    }
+    .header__player::before{
+        top: 8%;
+        left: 27%;
+    }
+    .header__player-next::after {
+        content: "«Как так?»";
         left: 24%;
+    }
+    .header__player-next::before {
+        content: "Сейчас в эфире";
+        top: 10%;
+        left: 29%;
     }
 
 
@@ -332,8 +348,7 @@
 }
 @media (max-width: 768px){
     .container {
-        width: 540px;
-        max-width: 100%;
+        width: 70%;
     }
     
     /* HEADER */
@@ -957,9 +972,6 @@
     .about__svg-1, .about__svg-2{
         display: none;
     }
-    .header__inform{
-        width: 84%;
-    }
 }
 @media (max-width: 320px){
     .text-700-60-100, .hero__second-word{
@@ -1046,9 +1058,7 @@
         font-size: 12px;
     }
     .container{
-        width: 256px;
-        max-width: 100%;
-        margin: 0 auto;
+        width: 80%;
     }
 
     /* HEADER */
@@ -1401,6 +1411,9 @@
     .border-section{
         bottom: 18.5%;
     }
+    .choices{
+        width: 100%;
+    }
 
 
     /* HOST */
@@ -1490,8 +1503,11 @@
         padding-top: 17.3%;
         padding-bottom: 69.1%;
     }
+    .playlist__left{
+        width: 100%;
+    }
     .playlist__form{
-        width: 287px;
+        width: 100%;
         flex-direction: initial;
         justify-content: initial;
         height: 53px;
@@ -1544,10 +1560,12 @@
     }
     .playlist__article> picture> img{
         width: 113px;
+        max-width: 100%;
         height: 113px;
     }
     .playlist__article> picture{
         width: 113px;
+        max-width: 100%;
         height: 113px;
     }
     .playlist__article:nth-last-child(n+3) {

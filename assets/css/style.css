@@ -181,13 +181,14 @@ a {
 }
 body {
     font-family: Muller, sans-serif;
+    position: relative;
 }
 .overflow-hidden{
-    overflow: hidden;
+    overflow-y: hidden;
 }
 .container {
-    max-width: 1110px;
-    width: 100%;
+    width: 1110px;
+    max-width: 100%;
     margin: 0 auto;
 }
 .flex {
@@ -372,7 +373,7 @@ body {
 }
 .header__container {
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 .header__inform {
     -webkit-box-pack: justify;
@@ -444,6 +445,9 @@ body {
     line-height: 16px;
     color: var(--gray);
 }
+.header__items a, .header__items-down a{
+    transition: color .3s ease-in-out;
+}
 .header__search-open--active {
     display: block;
     position: absolute;
@@ -459,6 +463,16 @@ body {
 .header__search-btn {
     position: absolute;
     right: -9%;
+}
+.header__search-svg{
+    cursor: pointer;
+}
+.header__search-svg.active{
+    opacity: 0;
+}
+.header__search-close{
+    position: absolute;
+    right: 1%;
 }
 .header__down {
     border-top: 1px solid #e6e8ec;
@@ -476,11 +490,20 @@ body {
     color: var(--black);
 }
 .header__btn {
+    position: inherit;
+    z-index: 2000;
+    transition: background-color .3s ease-in-out;
     height: 39px;
     text-align: center;
     padding: 0px 30.5px;
     border: 2px solid #121723;
     border-radius: 77px;
+}
+.header__search-svg path{
+    transition: stroke .3s ease-in-out;
+}
+.header__player svg path{
+    transition: fill .3s ease-in-out;
 }
 .header__old {
     width: 4%;
@@ -547,28 +570,42 @@ body {
 .header__player-next::after {
     content: "«Как так?»";
 }
-.header__btn-open {
+.header__modal-content{
     display: none;
 }
-.header__btn-open--active {
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    margin-top: 80px;
-    padding-left: 60px;
-    padding-top: 60px;
+.header__modal-content--active{
     display: block;
     position: fixed;
-    z-index: 1000;
+    top: 50%;
+    bottom: 0;
     width: 824px;
     max-width: 100%;
     height: 655px;
 }
-.header__social-link {
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 40px;
-    height: 40px;
+.header__modal-container{
+    display: none;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 1000;
+}
+.header__modal-container.active{
+    display: block;
+}
+.header__btn-open {
+    width: 824px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.header__social-link{
+    transition: fill .3s ease-in-out;
 }
 .header__login-social {
     width: 26.2%;
@@ -591,6 +628,9 @@ body {
 .header__login-subtitle {
     margin-bottom: 30px;
 }
+.header__login-subtitle a{
+    transition: color .3s ease-in-out;
+}
 .header__login-open {
     width: 92%;
     margin-bottom: 4%;
@@ -598,6 +638,7 @@ body {
     border-bottom: 1px solid var(--border);
 }
 .header___form-login {
+    transition: background-color .3s ease-in-out;
     background: transparent;
     padding: 10px 10px 10px 32px;
     width: 75%;
@@ -612,18 +653,22 @@ body {
     line-height: 20px;
     color: var(--gray);
 }
+.header__login-subtitle a{
+    transition: color .3s ease-in-out;
+}
 .header__form-btn {
+    transition: background-color .3s ease-in-out;
     display: block;
     border-radius: 40px;
     padding: 25px 54px;
 }
-.header__modal-content {
-    position: relative;
-}
 .header__open-svg {
+    outline: none;
+    transition: stroke .3s ease-in-out;
+    cursor: pointer;
     position: absolute;
     right: 3.8%;
-    top: -6%;
+    top: 5%;
 }
 /* Hero */
 .hero__container {
@@ -655,6 +700,7 @@ body {
     margin-bottom: 1.5%;
 }
 .hero__btn {
+    transition: background-color .3s ease-in-out;
     padding: 25px 54px;
     background: var(--violet);
     border-radius: 40px;
@@ -668,7 +714,10 @@ body {
 }
 .podcast__container {
     padding-top: 4.65%;
-    padding-bottom: 4.9%;
+    padding-bottom: 3.5%;
+}
+.podcast__subtitle{
+    margin-bottom: 15%;
 }
 .podcast__up {
     padding: 6% 6.5% 0 7%;
@@ -677,14 +726,9 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-.podcast__up svg {
-    -webkit-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    transform: translateY(10px);
-}
 .podcast__articles {
     width: 48.5%;
-    height: 140px;
+    min-height: 140px;
 }
 .podcast__articles:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
@@ -700,17 +744,23 @@ body {
     justify-content: space-between;
     margin-bottom: 5.5%;
 }
+.podcast__svg svg{
+    transform: translateY(7px);
+}
+.podcast__svg svg path{
+    transition: fill .3s ease-in-out;
+}
+.podcast__svg svg circle{
+    transition: stroke .3s ease-in-out;
+}
 .podcast__headtitle {
     margin-bottom: 2.8%;
 }
 .podcast__title {
     margin-bottom: 4px;
 }
-.podcast__subtitle {
-    margin-bottom: 16%;
-}
 .podcast__svg{
-    display: flex;
+    height: 48px;
 }
 .podcast__time {
     display: block;
@@ -718,6 +768,8 @@ body {
     color: var(--black);
 }
 .podcast__btn {
+    transform: translateY(-43%);
+    transition: background-color .3s ease-in-out;
     text-align: center;
     padding: 25px 54px;
     height: 70px;
@@ -750,11 +802,19 @@ body {
     height: 13px;
 }
 .podcast__down {
-    height: 25%;
+    height: 31px;
     border-top: 1px solid var(--gray);
 }
 .podcast__links {
     padding-left: 7%;
+    background: var(--white);
+    width: 100%;
+}
+.podcast__links a{
+    transition: color, background-color .3s ease-in-out;
+}
+.podcast__links > a svg path{
+    transition: fill, background-color .3s ease-in-out;
 }
 .podcast__links > button svg {
     margin-right: 6px;
@@ -770,10 +830,14 @@ body {
     -ms-transform: translateY(58%);
     transform: translateY(58%);
 }
+.podcast__articles-more{
+    display: none;
+}
 .podcast__right {
     width: 79%;
 }
 .podcast__articles-left {
+    height: 140px;
     position: relative;
 }
 .podcast__articles-left picture::before {
@@ -826,6 +890,13 @@ body {
 .podcast__link{
     justify-content: center;
 }
+.podcast__links a{
+    transition: color .3s ease-in-out;
+}
+.podcast__links > a svg path{
+    transition: fill .3s ease-in-out;
+}
+
 /* Show */
 .show__container {
     -webkit-box-pack: justify;
@@ -866,6 +937,7 @@ body {
     height: 89px;
 }
 .show__archive {
+    transition: background-color .3s ease-in-out;
     display: block;
     text-align: center;
     width: 160px;
@@ -885,6 +957,7 @@ body {
     justify-content: space-between;
 }
 .show__article {
+    transition: opacity .3s ease-in-out;
     position: relative;
     width: 31%;
     height: 260px;
@@ -905,7 +978,10 @@ body {
 }
 .show__more {
     display: flex;
-    
+    transition: color .3s ease-in-out;
+}
+.show__more svg path{
+    transition: fill .3s ease-in-out;
 }
 .show__more::before {
     position: absolute;
@@ -1166,7 +1242,11 @@ body {
 .ui-widget.ui-widget-content {
     border: none;
 }
+.ac.is-active>.ac-header .ac-trigger::after{
+    transition: background-image .3s ease-in-out;
+}
 .ac .ac-trigger {
+    transition: color .3s ease-in-out;
     border-top: 1px solid var(--gray);
     border-bottom: 1px solid var(--gray);
     font-family: "Muller";
@@ -1195,6 +1275,7 @@ html .ui-button.ui-state-disabled:active {
     padding: 0;
 }
 .ac .ac-panel .ac-text {
+    transition: color .3s ease-in-out;
     text-align: start;
     margin-bottom: 11%;
     padding: 0;
@@ -1273,6 +1354,7 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 8px;
 }
 .hosts__link {
+    transition: background-color, color .3s ease-in-out;
     text-align: center;
     padding: 10px 17px;
     border: 2px solid var(--purple);
@@ -1314,6 +1396,7 @@ html .ui-button.ui-state-disabled:active {
     flex-wrap: wrap;
 }
 .playlist__article {
+    transition: opacity .3s ease-in-out;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1354,6 +1437,7 @@ html .ui-button.ui-state-disabled:active {
     align-items: center;
 }
 .playlist__custom button::before {
+    transition: border .3s ease-in-out;
     content: "";
     width: 26px;
     height: 26px;
@@ -1400,6 +1484,7 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 3%;
 }
 .playlist__article-name::before {
+    transition: background-image, color .3s ease-in-out;
     content: "";
     position: absolute;
     top: 0;
@@ -1408,6 +1493,7 @@ html .ui-button.ui-state-disabled:active {
     left: 0;
 }
 .playlist__article-card {
+    transition: background-color, color .3s ease-in-out;
     padding: 15px 18px 16px 16px;
     border: 1px solid var(--gray);
     min-height: 64px;
@@ -1459,6 +1545,7 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 13%;
 }
 .player__link {
+    transition: background-color, color .3s ease-in-out;
     background-image: url(../img/yandex.svg);
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -1545,6 +1632,7 @@ html .ui-button.ui-state-disabled:active {
     height: 255px;
 }
 .about__form textarea {
+    transition: background-color .3s ease-in-out;
     width: 83%;
     height: 150px;
     padding: 30px 10px 10px 32px;
@@ -1553,6 +1641,7 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 2.5%;
 }
 .form__place {
+    transition: background-color .3s ease-in-out;
     padding: 10px 10px 10px 32px;
     border: 1px solid #ffffff;
     border-radius: 40px;
@@ -1566,7 +1655,17 @@ html .ui-button.ui-state-disabled:active {
 .about__form-flex label {
     width: 48%;
 }
+.about__form span{
+    transition: color .3s ease-in-out;
+}
+.footer__social svg path{
+    transition: fill .3s ease-in-out;
+}
+.footer__items a{
+    transition: color .3s ease-in-out;
+}
 .about__form-btn {
+    transition: background-color .3s ease-in-out;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
